@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Název stránky, který se zobrazí nahoře na záložce v prohlížeči -->
+    <title>Můj AI Zápisník</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="kontejner">
+    <!-- Hlavní viditelný nadpis aplikace -->
+    <h1>Můj AI Zápisník</h1>
+
+    <!-- Políčko pro bezpečné vložení tvého tajného API klíče -->
+    <p>
+        <input type="password" id="apiKeyInput" placeholder="Vlož svůj Gemini API klíč...">
+        <span id="keyStatus"></span>
+    </p>
+
+    <!-- Výběr režimu nahrávky pro přesnější zpracování umělou inteligencí -->
+    <p>
+        <label for="rezimSelect"><strong>Režim zápisu:</strong></label>
+        <select id="rezimSelect">
+            <option value="ostatni">📝 Ostatní (obecný zápis)</option>
+            <option value="poznamka">💡 Rychlá poznámka / Nápad</option>
+            <option value="specifikace">⚙️ Technická specifikace</option>
+            <option value="meeting">🤝 Meeting minutes (Zápis z jednání)</option>
+            <option value="kalendar">📅 Událost do kalendáře</option>
+            <option value="email">✉️ Návrh e-mailu</option>
+            <option value="domacnost">🛒 Nákup / Domácí úkoly</option>
+        </select>
+    </p>
+
+    <!-- Ovládací tlačítka pro spuštění a zastavení nahrávání -->
+    <button id="btnStart">Nahrávat</button>
+    <button id="btnStop" disabled>Zastavit</button>
+
+    <!-- Text, který uživateli ukazuje, co se právě děje -->
+    <p id="status">Připraveno k nahrávání...</p>
+        
+    <!-- Nástěnka, do které se budou ukládat a zobrazovat všechny pořízené nahrávky -->
+    <div id="seznamNahravek"></div>
+    </div>
+
+    <!-- Propojení s mozkem aplikace (souborem app.js) -->
+    <script src="app.js"></script>
+</body>
+</html>

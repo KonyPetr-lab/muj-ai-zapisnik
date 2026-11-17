@@ -1,0 +1,80 @@
+/* Základní nastavení celé stránky – jemné světle šedé pozadí a moderní písmo */
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f4f6f9;
+    color: #2c3e50;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Hlavní vycentrovaný sloupec aplikace, aby se text neroztahoval přes celý monitor */
+.kontejner {
+    max-width: 720px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Styl pro všechna tlačítka na stránce – zaoblené rohy, moderní vzhled a plynulá změna barvy */
+button {
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+/* Ztmavení tlačítka, když na něj uživatel najede myší */
+button:hover:not(:disabled) {
+    background-color: #1d4ed8;
+}
+
+/* Vzhled neaktivního (vypnutého) tlačítka, například "Zastavit" před spuštěním záznamu */
+button:disabled {
+    background-color: #cbd5e1;
+    color: #64748b;
+    cursor: not-allowed;
+}
+
+/* Vzhled textového políčka pro API klíč i rozbalovacího seznamu režimů */
+input[type="password"], select {
+    padding: 8px 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 14px;
+    background-color: white;
+    color: #2c3e50;
+}
+
+input[type="password"] {
+    width: 240px;
+}
+
+/* Vzhled jednotlivých karet s uloženými nebo čerstvými poznámkami */
+.karta {
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 16px 20px;
+    margin-top: 16px;
+}
+
+/* Speciální červený styl pro tlačítko Smazat, aby se nepletlo s hlavními tlačítky */
+.btn-smazat {
+    float: right;
+    background-color: #fee2e2;
+    color: #dc2626;
+    padding: 6px 12px;
+    font-size: 13px;
+}
+
+/* Zvýraznění tlačítka Smazat po najetí myší */
+.btn-smazat:hover:not(:disabled) {
+    background-color: #fecaca;
+}
